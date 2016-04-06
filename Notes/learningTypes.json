@@ -1,0 +1,48 @@
+{
+  "terms":
+  {
+    "instances": "Input, vector",
+    "concept": "Classification of input",
+    "targetConcept": "Determines whether input gives output",
+    "hypothesisClass":"Set of all possible concepts",
+    "trainingSet":"Sample, Contains input, with output",
+    "candidate":"Concept that may be target concept",
+    "testingSet":"Looks like sample, ensures candidate is correct"
+  },
+  "supervisedLearning":
+  {
+    "classification":"labels -> X -> labels[X]",
+    "regression":"input -> number"
+  },
+  "decisionTrees":
+  {
+    "example":
+    {
+      "input":"Restaurant",
+      "desiredOutput":"Whether to enter",
+      "features": {
+        "type": ["italian", "french","thai"],
+        "atmosphere": ["fancy","dingy","casual"],
+        "occupied":[0,1],
+        "hotDate":[0,1],
+        "cost":["$","$$","$$$"],
+        "hunger":[0,1],
+        "raining":[0,1]
+      }
+    },
+    "representation":{
+      "decisionNode":"attribute",
+      "stem":"value",
+      "boxes":"output"
+    },
+    "algorithm":
+    [
+      "Pick best attribute",
+      "ask question",
+      "follow answer path",
+      "repeat until solve"
+
+    ]
+  }
+
+}
